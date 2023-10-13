@@ -11,12 +11,16 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: #A3CEF1;
+}
+h1{
+    margin-bottom: 5px;
 }
 
 .fixed-size-container{
     display: flex;
     flex: wrap;
-    border: solid black 5px;
     width: 500px;
     height: 500px;
 }
@@ -32,5 +36,66 @@ body{
     display: flex;
     flex-grow: 1;
     flex-shrink: 1;
-    border: solid black 1px;
+}
+
+.buttons-and-canvas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 29%;
+    gap: 50px;
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.buttons{
+    background-color: #6096BA;
+    color: #E7ECEF;
+    border-style: none;
+    padding: 15px 100px;
+    border-radius: 15px;
+    
+}
+.buttons:hover{
+    cursor: pointer;
+    background-color: #274C77;
+    box-shadow: 0 8px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+}
+
+.grid-modifier{
+    margin: 10px 0px;
+    -webkit-appearance: none;
+    width: 400px;
+    height: 15px;
+    border-radius: 5px;
+    background: #6096BA;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.grid-modifier:hover {
+    opacity: 1;
+    box-shadow: 0 8px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+  }
+
+.grid-modifier::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #274C77;
+    cursor: pointer;
+}
+
+.grid-modifier::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #274C77;
+    cursor: pointer;
 }
