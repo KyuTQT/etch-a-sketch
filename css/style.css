@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #A3CEF1;
 }
 
 .fixed-size-container{
@@ -54,7 +55,7 @@ body{
     width: 400px;
     height: 15px;
     border-radius: 5px;
-    background: #d3d3d3;
+    background: #6096BA;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -70,7 +71,7 @@ body{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #274C77;
     cursor: pointer;
 }
 
@@ -78,6 +79,6 @@ body{
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #274C77;
     cursor: pointer;
 }
