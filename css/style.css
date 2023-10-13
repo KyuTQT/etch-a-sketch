@@ -14,6 +14,9 @@ body{
     justify-content: center;
     background-color: #A3CEF1;
 }
+h1{
+    margin-bottom: 5px;
+}
 
 .fixed-size-container{
     display: flex;
