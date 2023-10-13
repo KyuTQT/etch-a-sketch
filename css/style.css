@@ -39,14 +39,29 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 17%;
-    gap: 100px;
+    margin-right: 29%;
+    gap: 50px;
 }
 .button-container{
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
 }
+
+.buttons{
+    background-color: #6096BA;
+    color: #E7ECEF;
+    border-style: none;
+    padding: 15px 100px;
+    border-radius: 15px;
+    
+}
+.buttons:hover{
+    cursor: pointer;
+    background-color: #274C77;
+    box-shadow: 0 8px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
+}
+
 .grid-modifier{
     margin: 10px 0px;
     -webkit-appearance: none;
@@ -61,6 +76,7 @@ body{
 }
 .grid-modifier:hover {
     opacity: 1;
+    box-shadow: 0 8px 5px 0 rgba(0,0,0,0.2), 0 6px 5px 0 rgba(0,0,0,0.19);
   }
 
 .grid-modifier::-webkit-slider-thumb {
