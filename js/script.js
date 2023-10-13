@@ -14,4 +14,4 @@ function fillUpContainer(gridSize){
     }
 }
 
-fillUpContainer(64);
+fillUpContainer(32);
