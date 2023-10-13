@@ -21,6 +21,8 @@ function fillUpContainer(gridSize){
     }
 }
 
+fillUpContainer(32);
+
 slider.oninput = function(){
     canvasSizeText.textContent = `${this.value} x ${this.value} canvas size`;
     fillUpContainer(this.value);
