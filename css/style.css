@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
 body{
     display: flex;
     flex-direction: column;
