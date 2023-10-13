@@ -16,7 +16,7 @@ function fillUpContainer(gridSize){
         let childDiv = document.createElement('div');
         childDiv.setAttribute('class', 'child');
         childDiv.style.flexBasis = `calc(100% / ${gridSize})`;
-        childDiv.style.backgroundColor = 'grey';
+        childDiv.style.backgroundColor = '#E7ECEF';
         divContainer.appendChild(childDiv);  
     }
 }
