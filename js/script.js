@@ -6,8 +6,10 @@ let slider = document.querySelector(`.grid-modifier`);
 let canvasSizeText = document.querySelector(`.canvas-size-label`);
 
 let isMousePressed = false;
+let gridCanvas;
 
 function fillUpContainer(gridSize){
+    gridCanvas = gridSize;
     if(divContainer.hasChildNodes()){
         while(divContainer.firstChild){
             divContainer.removeChild(divContainer.lastChild);
@@ -29,6 +31,7 @@ slider.oninput = function(){
     canvasSizeText.textContent = `${this.value} x ${this.value} canvas size`;
     fillUpContainer(this.value);
 }
+
 
 
 divContainer.addEventListener('mousedown', function(){
