@@ -60,6 +60,10 @@ partyPaint.addEventListener('click', function(){
     isPartyOn = true;
 })
 
+divContainer.addEventListener('dragstart', (event) => {
+    event.preventDefault();
+  })
+
 divContainer.addEventListener('mousedown', function(){
     isMousePressed = true;
 })
@@ -77,9 +81,7 @@ function gridColor(selectedGrid){
             let randomNumber = Math.floor(Math.random() * 256);
             randomizedRGBColor[i] = randomNumber;
         }
-        if(selectedGrid.style.backgroundColor === 'rgb(231, 236, 239)'){
-            selectedGrid.style.backgroundColor = `rgb(${randomizedRGBColor[0]}, ${randomizedRGBColor[1]}, ${randomizedRGBColor[2]})`;
-        }
+        selectedGrid.style.backgroundColor = `rgb(${randomizedRGBColor[0]}, ${randomizedRGBColor[1]}, ${randomizedRGBColor[2]})`;
         
     }
 }
