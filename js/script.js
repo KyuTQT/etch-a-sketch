@@ -29,10 +29,16 @@ fillUpContainer(32);
 
 partyPaint.classList.toggle('active');
 
-slider.oninput = function(){
+
+slider.addEventListener('input', function(){
     canvasSizeText.textContent = `${this.value} x ${this.value} canvas size`;
+})
+
+
+slider.addEventListener('mouseup', function(){
     fillUpContainer(this.value);
-}
+})
+
 
 clearPaint.addEventListener('click', function(){
     fillUpContainer(gridCanvas);
