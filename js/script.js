@@ -29,3 +29,8 @@ slider.oninput = function(){
 }
 
 
+divContainer.addEventListener('mousedown', function(e){
+    e.target.style.backgroundColor = 'black';
+})
+
+
