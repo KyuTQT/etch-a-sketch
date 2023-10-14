@@ -44,7 +44,10 @@ divContainer.addEventListener('mousemove', function(e){
     if(isMousePressed){
         e.target.style.backgroundColor = 'black';
     }
-    
+})
+
+divContainer.addEventListener('click', function(e){
+    e.target.style.backgroundColor = 'black';
 })
 
 
