@@ -7,16 +7,24 @@
     box-sizing: border-box;
   }
 
+@font-face {
+    font-family: PixelFont;
+    src: url(//fonts/PixelEmulator-xq08.ttf);
+}
+
 body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 10%;
+    margin-left: 4%;
     background-color: #A3CEF1;
     gap: 100px;
 }
 h1{
     margin-top: 10px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
 }
 
 .fixed-size-container{
@@ -49,6 +57,9 @@ h1{
 
 .canvas-size-label{
     margin-bottom: 10px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 28px;
+    letter-spacing: 8px;
 }
 
 .button-container{
@@ -64,7 +75,8 @@ h1{
     padding: 15px 100px;
     border-radius: 15px;
     font-size: 25px;
-    font-weight: bold;
+    letter-spacing: 6px;
+    font-family: 'Pixelify Sans', sans-serif;
     
 }
 .buttons:hover{
