@@ -5,6 +5,8 @@ let divContainer = document.querySelector(`#div-container`);
 let slider = document.querySelector(`.grid-modifier`);
 let canvasSizeText = document.querySelector(`.canvas-size-label`);
 
+let isMousePressed = false;
+
 function fillUpContainer(gridSize){
     if(divContainer.hasChildNodes()){
         while(divContainer.firstChild){
@@ -29,8 +31,19 @@ slider.oninput = function(){
 }
 
 
-divContainer.addEventListener('mousedown', function(e){
-    e.target.style.backgroundColor = 'black';
+divContainer.addEventListener('mousedown', function(){
+    isMousePressed = true;
+})
+
+divContainer.addEventListener('mouseup', function(){
+    isMousePressed = false;
+})
+
+divContainer.addEventListener('mousemove', function(e){
+    if(isMousePressed){
+        e.target.style.backgroundColor = 'black';
+    }
+    
 })
 
 
