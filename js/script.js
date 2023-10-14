@@ -64,8 +64,9 @@ divContainer.addEventListener('dragstart', (event) => {
     event.preventDefault();
   })
 
-divContainer.addEventListener('mousedown', function(){
+divContainer.addEventListener('mousedown', function(e){
     isMousePressed = true;
+    shouldGetColor = true;
 })
 
 divContainer.addEventListener('mouseup', function(){
@@ -81,12 +82,16 @@ function gridColor(selectedGrid){
             let randomNumber = Math.floor(Math.random() * 256);
             randomizedRGBColor[i] = randomNumber;
         }
-        selectedGrid.style.backgroundColor = `rgb(${randomizedRGBColor[0]}, ${randomizedRGBColor[1]}, ${randomizedRGBColor[2]})`;
+        if(selectedGrid.style.backgroundColor === 'black' || selectedGrid.style.backgroundColor === 'rgb(231, 236, 239)'){
+            selectedGrid.style.backgroundColor = `rgb(${randomizedRGBColor[0]}, ${randomizedRGBColor[1]}, ${randomizedRGBColor[2]})`;
+        }
         
     }
 }
 
+
 divContainer.addEventListener('mousemove', function(e){
+    console.log(e.target.style.backgroundColor);
     if(isMousePressed){
         gridColor(e.target);
     }
