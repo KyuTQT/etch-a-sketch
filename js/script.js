@@ -11,9 +11,7 @@ let gridCanvas;
 function fillUpContainer(gridSize){
     gridCanvas = gridSize;
     if(divContainer.hasChildNodes()){
-        while(divContainer.firstChild){
-            divContainer.removeChild(divContainer.lastChild);
-        }
+        divContainer.innerHTML = '';
     }
     let actualGridSize = gridSize * gridSize;
     for(let i = 1; i <= actualGridSize; i++){   
