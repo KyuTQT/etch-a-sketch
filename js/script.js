@@ -1,6 +1,3 @@
-let link = document.createElement('link');
-link.href = './css/style.css'
-
 let divContainer = document.querySelector(`#div-container`);
 let slider = document.querySelector(`.grid-modifier`);
 let canvasSizeText = document.querySelector(`.canvas-size-label`);
