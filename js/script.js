@@ -39,10 +39,18 @@ clearPaint.addEventListener('click', function(){
 })
 
 normalPaint.addEventListener('click', function(){
+    if(isPartyOn){
+        normalPaint.classList.toggle('active');
+        partyPaint.classList.toggle('active');
+    }
     isPartyOn = false;
 })
 
 partyPaint.addEventListener('click', function(){
+    if(!isPartyOn){
+        partyPaint.classList.toggle('active');
+        normalPaint.classList.toggle('active');
+    }
     isPartyOn = true;
 })
 
