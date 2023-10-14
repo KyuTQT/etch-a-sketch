@@ -63,6 +63,8 @@ h1{
     border-style: none;
     padding: 15px 100px;
     border-radius: 15px;
+    font-size: 25px;
+    font-weight: bold;
     
 }
 .buttons:hover{
