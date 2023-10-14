@@ -4,6 +4,9 @@ link.href = './css/style.css'
 let divContainer = document.querySelector(`#div-container`);
 let slider = document.querySelector(`.grid-modifier`);
 let canvasSizeText = document.querySelector(`.canvas-size-label`);
+let normalPaint = document.querySelector('#normal');
+let partyPaint = document.querySelector('#party');
+let clearPaint = document.querySelector('#clear');
 
 let isMousePressed = false;
 let gridCanvas;
@@ -30,7 +33,9 @@ slider.oninput = function(){
     fillUpContainer(this.value);
 }
 
-
+clearPaint.addEventListener('click', function(){
+    fillUpContainer(gridCanvas);
+})
 
 divContainer.addEventListener('mousedown', function(){
     isMousePressed = true;
