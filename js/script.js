@@ -9,6 +9,7 @@ let isMousePressed = false;
 let gridCanvas;
 let isPartyOn = false;
 let randomizedRGBColor = [];
+let canColor = false;
 
 function fillUpContainer(gridSize){
     gridCanvas = gridSize;
@@ -21,6 +22,9 @@ function fillUpContainer(gridSize){
         childDiv.setAttribute('class', 'child');
         childDiv.style.flexBasis = `calc(100% / ${gridSize})`;
         childDiv.style.backgroundColor = '#E7ECEF';
+        childDiv.addEventListener('mouseleave', function(){
+            canColor = true;
+        })
         divContainer.appendChild(childDiv);  
     }
 }
@@ -66,7 +70,8 @@ divContainer.addEventListener('dragstart', (event) => {
 
 divContainer.addEventListener('mousedown', function(e){
     isMousePressed = true;
-    shouldGetColor = true;
+    gridColor(e.target);
+    canColor = false;
 })
 
 divContainer.addEventListener('mouseup', function(){
@@ -82,23 +87,17 @@ function gridColor(selectedGrid){
             let randomNumber = Math.floor(Math.random() * 256);
             randomizedRGBColor[i] = randomNumber;
         }
-        if(selectedGrid.style.backgroundColor === 'black' || selectedGrid.style.backgroundColor === 'rgb(231, 236, 239)'){
-            selectedGrid.style.backgroundColor = `rgb(${randomizedRGBColor[0]}, ${randomizedRGBColor[1]}, ${randomizedRGBColor[2]})`;
-        }
-        
+        selectedGrid.style.backgroundColor = `rgb(${randomizedRGBColor[0]}, ${randomizedRGBColor[1]}, ${randomizedRGBColor[2]})`;
     }
 }
 
 
 divContainer.addEventListener('mousemove', function(e){
-    console.log(e.target.style.backgroundColor);
-    if(isMousePressed){
+    if(isMousePressed && canColor){
         gridColor(e.target);
+        canColor = false;
     }
 })
 
-divContainer.addEventListener('click', function(e){
-    gridColor(e.target);
-})
 
 
